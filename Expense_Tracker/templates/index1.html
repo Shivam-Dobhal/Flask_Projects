@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+
+</head>
+<body>
+    <h1>My Expense Tracker</h1>
+    <form action="/"  method="POST">
+        <input type="text" name="detail" placeholder="enter the description">
+        <input type="number" name="price" placeholder="enter expense values">
+        
+        <input type="submit" value="+">
+    </form>
+
+<ul>
+
+{% for expen in expenses %}
+       <li><strong>{{expen.detail}}</strong><br> ${{expen.price}}
+    <form action="/delete"  method="POST" style="display:inline">
+         <input type="hidden" name="new_index" value="{{loop.index0}}">        
+         <button type="submit">Delete</button>
+         
+    </form>
+       </li>    
+
+{% endfor %}
+  
+
+</ul>
+<h2>total:{{total_sum}}</h2>
+
+
+</body>
+</html>

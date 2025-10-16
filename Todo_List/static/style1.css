@@ -1,0 +1,127 @@
+/* --- Page Layout --- */
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #74ABE2, #5563DE);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* --- Container (use body > * selectors since no class/id) --- */
+body > * {
+    background: #ffffff;
+    width: 380px;
+    padding: 30px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* --- Title --- */
+h1 {
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* --- Input & Add Button --- */
+form:first-of-type {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+form input[type="text"]:focus {
+    border-color: #5563DE;
+    box-shadow: 0 0 6px rgba(85,99,222,0.3);
+}
+
+form input[type="submit"] {
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #5563DE, #6A8BE8);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #4856D6, #5A7FE2);
+}
+
+/* --- To-do List --- */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Scrollbar for the list */
+ul::-webkit-scrollbar {
+    width: 6px;
+}
+ul::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+li {
+    background: #f8f8ff;
+    margin-bottom: 12px;
+    padding: 12px 14px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+}
+
+/* --- Delete Button --- */
+li form button {
+    background: #ff6b6b;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+li form button:hover {
+    background: #e55050;
+    transform: scale(1.1);
+}
+
+
+
+
+
+

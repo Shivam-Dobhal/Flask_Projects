@@ -1,0 +1,146 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>To-Do LISt</h1>
+    <ul>
+        {%for task in tasks %}
+        <li>{{task}}</li>
+         {% endfor %}
+    </ul>
+         
+
+    <form action="/" method="POST">
+        
+       <input type="text" name="task" placeholder="Enter your task">
+       <input type="submit" value="+"> 
+       <input type="submit" value="Delete">
+       
+    </form>
+
+    
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+
+</head>
+<body>
+    <h1>To-Do LISt</h1>
+
+  <div class="container">
+      <form action="/", method="POST">
+         <div class="entry_area">
+           <input type="text" name="task" required>
+           <input type="submit" value="+"> 
+            <div class="labelline">enter your task</div>
+         </div>
+
+      </form>
+  </div>
+    </form>
+
+
+
+
+<ul>
+    
+        {%for task in tasks %}
+        <li>{{task}} 
+           <form action="/delete", method ="POST", style="display:inline">
+            <input type="hidden" name="task_index" value="{{ loop.index0 }}">
+            <button type="submit">Delete</button>
+           </form>
+        </li>
+         {% endfor %}
+    </ul>
+
+
+
+
+
+    
+</body> 
+</html>  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+
+
+</head>
+<body>
+    <h1>To-Do LISt</h1>
+
+  
+      <form action="/", method="POST">
+       
+           <input type="text" name="task" required placeholder="enter your task">
+           <input type="submit" value="+"> 
+           
+      
+
+      </form>
+ 
+    </form>
+
+
+
+
+<ul>
+    
+        {%for task in tasks %}
+        <li>{{task}} 
+           <form action="/delete", method ="POST", style="display:inline">
+            <input type="hidden" name="task_index" value="{{ loop.index0 }}">
+            <button type="submit">Delete</button>
+           </form>
+        </li>
+         {% endfor %}
+    </ul>
+
+
+
+
+
+    
+</body> 
+</html> 

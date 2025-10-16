@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style1.css') }}">
+
+</head>
+<body>
+    <h1>My Notes</h1>
+
+    <form action="/", method="POST">
+        <input type="text" name="title" placeholder="Enter The Title For Note">
+        <input type="text" name="description" placeholder="Enter details">
+        <input type="submit" value="+">
+    </form>
+<ul>    
+{% for note in notes %}
+
+  <li>
+    <strong>{{note.title}}</strong><br>{{note.content}}
+
+     <form action="/delete"  method="POST"  style="display:inline">
+       <input type="hidden"  name="new_index" value="{{loop.index0}}">
+       <button type="submit">Delete</button>    
+     </form>
+
+  </li>
+
+{% endfor %}  
+</ul>  
+    
+</body>
+</html>

@@ -1,0 +1,119 @@
+
+/* ---------- General Page ---------- */
+body {
+    font-family: "Segoe UI", Roboto, sans-serif;
+    background-color: #fdfcfb;
+    margin: 0;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+/* ---------- Title ---------- */
+h1 {
+    font-weight: 600;
+    font-size: 26px;
+    letter-spacing: 1px;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+/* ---------- Form Section ---------- */
+form:first-of-type {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+form input[type="text"] {
+    padding: 10px 12px;
+    width: 220px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    background-color: #fff;
+}
+
+form input[type="text"]:focus {
+    border-color: #0078d7;
+    box-shadow: 0 0 4px rgba(0,120,215,0.3);
+}
+
+form input[type="submit"] {
+    padding: 10px 15px;
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0064b4;
+    transform: translateY(-1px);
+}
+
+/* ---------- Notes List ---------- */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 420px;
+}
+
+/* ---------- Each Note ---------- */
+li {
+    background-color: #fff;
+    padding: 14px 16px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border-left: 4px solid #0078d7;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.12);
+}
+
+/* ---------- Note Content ---------- */
+li strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #222;
+    margin-bottom: 5px;
+}
+
+li br + span,
+li br + p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* ---------- Delete Button ---------- */
+li form button {
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    float: right;
+    font-size: 13px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+li form button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}

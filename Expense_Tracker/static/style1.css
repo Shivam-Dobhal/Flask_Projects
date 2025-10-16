@@ -1,0 +1,132 @@
+/* ---------- Page Setup ---------- */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f9fb;
+    margin: 0;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+/* ---------- Title ---------- */
+h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #1e88e5;
+    margin-bottom: 25px;
+}
+
+/* ---------- Add Expense Form ---------- */
+form:first-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+form input[type="text"],
+form input[type="number"] {
+    padding: 10px 12px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus {
+    border-color: #1e88e5;
+    box-shadow: 0 0 4px rgba(30, 136, 229, 0.3);
+}
+
+form input[type="submit"] {
+    background-color: #1e88e5;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #1565c0;
+    transform: translateY(-2px);
+}
+
+/* ---------- Expense List ---------- */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 420px;
+}
+
+/* ---------- Each Expense Item ---------- */
+li {
+    background-color: #ffffff;
+    border-left: 5px solid #1e88e5;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------- Expense Description ---------- */
+li strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+/* ---------- Expense Value ---------- */
+li br + span,
+li br + p,
+li {
+    color: #444;
+    font-size: 15px;
+}
+
+/* ---------- Delete Button ---------- */
+li form button {
+    background-color: #e53935;
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    float: right;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+li form button:hover {
+    background-color: #c62828;
+    transform: scale(1.05);
+}
+
+/* ---------- Total Section ---------- */
+h2 {
+    background-color: #e3f2fd;
+    color: #1e88e5;
+    padding: 12px 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    margin-top: 25px;
+    font-weight: 600;
+    font-size: 18px;
+}
